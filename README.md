@@ -1,7 +1,19 @@
 # Classification_Final_Report
 
 ### <b>Project Description:</b><br>
-The Final Report for my Classification Project using classifications-methodologies and algorithms in ML.
+This is my final project to find the lead drivers for customer churn at Telco. 
+
+<b>In this project I will construct a ML classification model that can accurately predict Telco's customer churn.</b>
+
+My processees will include utilizing:
+  - Jupyter notebook: to log my exploration and report findings
+  - Excel: where the Telco data has been created and stored
+  - Python: for debugging my code and creating the acquire/prepare files
+  - Pandas: used within Jupyter notebook
+  - Seaborn: to chart and explore the data
+  - Tableau: to present the found data in the Final Report
+
+Included in the Final Report file, I will have a step-by-step process of the key findings of how the key driver(s) were found, the models and their accuracy used in creating the ML machines and what the outcomes vs. my initial hypothesis were.
 
 ### <b>Project Goals:</b><br>
 To find the drivers of Telco's high churn rate.
