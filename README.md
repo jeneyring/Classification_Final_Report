@@ -1,23 +1,32 @@
 # Classification_Final_Report
+
+### <b>Project Description:</b><br>
 The Final Report for my Classification Project using classifications-methodologies and algorithms in ML.
 
-<b>GOAL:</b><br>
- To construct a classification model that will predict Telco's churn rate with 80% accuracy whether a group of customers will churn or not.
+### <b>Project Goals:</b><br>
+To find the drivers of Telco's high churn rate.
+
+### <b>Deliverables:</b><br>
+To construct a classification model that will use the found driver(s) to predict Telco's churn rate with 80% accuracy of whether a group of customers will churn or not.
  
- 
- <b>STEPS TO GET THERE:</b><br>
- - Find the top 3 churn drivers of Telco data
+ ### <b>Initial Hypothesis and Questions:</b><br>
+
+
+ ### <b>Project Planning (aka How I think I'll get there!):</b><br>
+ <b>STEPS AHEAD:</b><br>
  - Explore these 3 churn drivers
      (ie. charts, crosstabs, hypothesis testing)
  - Create classification models to train, validate, and test drivers on
 
 
 
- <b>PROJECT CHECK-LIST:</b><br>
+ <b>MY PROJECT CHECK-LIST:</b><br>
  - Create acquire and prepare.py modules
  - Log down process and questions/takeaways along the way
  - Construct ML models
- - <b> Final Report: </b><br>
+
+
+ - <b> FINAL REPORT: </b><br>
     - use markdown to guide audience
       - (all cells with code need comments!)
     - Begin project with Overview and Goals
