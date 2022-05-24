@@ -1,30 +1,32 @@
-def telco_split(df):
-    '''
-    This function takes in Telco data from the acquire.py file,
-    performs a split and stratifies on churn.
-    Returns train, validate, and test dfs.
-    '''
-    train_validate, test = train_test_split(df, test_size=.2, 
-                                        random_state=123, 
-                                        stratify=df.churn)
-    train, validate = train_test_split(train_validate, test_size=.3, 
-                                   random_state=123, 
-                                   stratify=train_validate.churn)
-    return train, validate, test
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+#Prepare Telco Data:
+def clean_telco_data(df):
+    #Replacing empty cells with nulls:
+    df = df.replace(' ', np.nan)
+    #Replacing ints with yes or no:
+    df.senior_citizen = df.senior_citizen.replace([0, 1], ['No', 'Yes'])
+    #Changing total_charges from 'object' type to 'float64':
+    df.total_charges = df.total_charges.astype('float')
+    #Dropping rows with nulls:
+    df = df.dropna()
+    #Dropping unneeded columns:
+    columns_to_drop = ['contract_type_id', 'payment_type_id', 'internet_service_type_id']
+    df = df.drop(columns = columns_to_drop)
+    #creating dummy variables of categorical columns
+    dummy_df = pd.get_dummies(df[['gender', 'senior_citizen', 
+    'partner', 'dependents', 'phone_service', 'multiple_lines', 
+    'online_security', 'online_backup', 'device_protection', 
+    'tech_support', 'streaming_tv', 'streaming_movies', 
+    'paperless_billing', 'contract_type', 'payment_type', 
+    'internet_service_type']], drop_first = True)
+    #concatenating dummy variables onto original dataframe
+    df = pd.concat([df, dummy_df], axis = 1)
+    return df
 
-def prep_telco(df):
-    '''
-    This function takes in the Telco df(via acquire.py).
-    It drops the species_id column and renames species_name to species, 
-    Performs a 3-way split stratified on churn, and
-    Returns train, validate, and test dataframes.
-    '''
-    # drop and rename columns
-    df = df.drop(columns='customer_id').rename(columns={'has_churned': 'Churned_Customers'})
-    
-    # split dataframe into train, validate, and test
-    train, validate, test = telco_split(df)
-    
+def prep_telco_data(df):
+    df = clean_telco_data(df)
+    train, test = train_test_split(df, train_size = 0.8, stratify = df.churn, random_state = 1234)
+    train, validate = train_test_split(train, train_size = 0.8, stratify = train.churn, random_state = 1234)
     return train, validate, test
-
-train, validate, test = prep_telco(df)
