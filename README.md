@@ -37,19 +37,20 @@ To find the demographic drivers of Telco's high churn rate and their subgroups (
 
 
  ### <b>Initial Hypothesis and Questions:</b><br>
-> - ** Hypothesis 1 -**
+
+#### Hypothesis 1 
 > - alpha = 0.05
 > - H0: There is NO relationship between churn and customers without partners
 > - Ha: There IS a relationship between churn and customers without partners
-> - Outcome: I rejected the Null Hypothesis, in that there is a relationship with single customers and churn.
+> - <b>Outcome: I rejected the Null Hypothesis, in that there is a relationship with single customers and churn.</b>
 
-> - ** Hypothesis 2 -**
+#### Hypothesis 2 
 > - alpha = 0.05
 > - H0: There is NO relationship between churn and customers with dependents
 > - Ha: There IS a relationship between churn and customers with dependents
-> - Outcome: I rejected the Null Hypothesis, in that there is a relationship with customers that have dependents and the high churn rate.
+> - <b>Outcome: I rejected the Null Hypothesis, in that there is a relationship with customers that have dependents and the high churn rate.</b>
 
-<hr style="border-top: 10px lavender; margin-top: 1px; margin-bottom: 1px"></hr>
+<hr style="border-top: 10px green; margin-top: 1px; margin-bottom: 1px"></hr>
 
 
  ### <b>Project Planning (aka How I think I'll get there!):</b><br>
