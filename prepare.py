@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
+# imputer from sklearn
+from sklearn.impute import SimpleImputer
+
 #Prepare Telco Data:
 def clean_telco_data(df):
     #Replacing empty cells with nulls:
@@ -15,12 +18,7 @@ def clean_telco_data(df):
     columns_to_drop = ['contract_type_id', 'payment_type_id', 'internet_service_type_id']
     df = df.drop(columns = columns_to_drop)
     #creating dummy variables of categorical columns
-    dummy_df = pd.get_dummies(df[['gender', 'senior_citizen', 
-    'partner', 'dependents', 'phone_service', 'multiple_lines', 
-    'online_security', 'online_backup', 'device_protection', 
-    'tech_support', 'streaming_tv', 'streaming_movies', 
-    'paperless_billing', 'contract_type', 'payment_type', 
-    'internet_service_type']], drop_first = True)
+    dummy_df = pd.get_dummies(df[['gender', 'senior_citizen', 'partner', 'dependents', 'phone_service', 'multiple_lines', 'online_security', 'online_backup', 'device_protection', 'tech_support', 'streaming_tv', 'streaming_movies', 'paperless_billing', 'contract_type', 'payment_type', 'internet_service_type']], drop_first = True)
     #concatenating dummy variables onto original dataframe
     df = pd.concat([df, dummy_df], axis = 1)
     return df

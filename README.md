@@ -55,9 +55,12 @@ To find the demographic drivers of Telco's high churn rate and their subgroups (
 
  ### <b>Project Planning (aka How I think I'll get there!):</b><br>
  <b>STEPS AHEAD:</b><br>
- - Explore these 3 churn drivers
-     (ie. charts, crosstabs, hypothesis testing)
- - Create classification models to train, validate, and test drivers on
+ - Explore these 3 demographic variables and see if churn drivers:
+    1) Senior citizens
+    2) Single customers
+    3) Customers with dependents
+  Using exploration techniques (ie. charts, crosstabs, hypothesis testing)
+ - Create classification models to train, validate, and test drivers on.
 
 
 
