@@ -3,25 +3,53 @@
 ### <b>Project Description:</b><br>
 This is my final project to find the lead drivers for customer churn at Telco. 
 
-<b>In this project I will construct a ML classification model that can accurately predict Telco's customer churn.</b>
+<b>In this project I will explore and Hypothesis test the Telco dataset to find any relations between different Telco customer demographics and churn.
 
-My processees will include utilizing:
-  - Jupyter notebook: to log my exploration and report findings
-  - Excel: where the Telco data has been created and stored
-  - Python: for debugging my code and creating the acquire/prepare files
-  - Pandas: used within Jupyter notebook
-  - Seaborn: to chart and explore the data
-  - Tableau: to present the found data in the Final Report
+I then will construct a ML classification model that can accurately predict Telco's customer churn.</b>
 
-Included in the Final Report file, I will have a step-by-step process of the key findings of how the key driver(s) were found, the models and their accuracy used in creating the ML machines and what the outcomes vs. my initial hypothesis were.
+
+Included in the Final Report file, there is Scratchpad file with the step-by-step process of the key findings of how the key driver(s) were found, the models and their accuracy used in creating the ML model and what the outcomes vs. my initial hypothesis were.
 
 ### <b>Project Goals:</b><br>
-To find the drivers of Telco's high churn rate.
+To find the demographic drivers of Telco's high churn rate and their subgroups (or 'why' of churning).
+
 
 ### <b>Deliverables:</b><br>
-To construct a classification model that will use the found driver(s) to predict Telco's churn rate with 80% accuracy of whether a group of customers will churn or not.
- 
+- A classification model that will use the found driver(s) to predict Telco's churn rate with 80% accuracy of whether a group of customers will churn or not.
+- A final notebook presentation.
+- 5min presentation and breakdown of the final process.
+
+### <b>Data Dictionary:</b><br>
+|Target|Datatype|Definition|
+|:-------|:--------|:----------|
+| churn | 7043 non-null: object | Telco's recent customer churn list |
+
+|Feature|Datatype|Definition|
+|:-------|:--------|:----------|
+| gender           |  7043 non-null: object | gender of Telco customers|
+| senior_citizen   |  7043 non-null: int64  | 60+ aged Telco customers|
+| partner          |  7043 non-null: object | Telco customers with/without partner|
+| dependents       |  7043 non-null: object | Customers with/without dependents|
+| contract_type    |  7043 non-null: object | Contract types for customers|
+| internet_service_type |  7043 non-null: object | None; DSL; Fiber Optic types|
+| payment_types    |  7043 non-null: object | payment forms for Customers|
+
+
+
  ### <b>Initial Hypothesis and Questions:</b><br>
+> - ** Hypothesis 1 -**
+> - alpha = 0.05
+> - H0: There is NO relationship between churn and customers without partners
+> - Ha: There IS a relationship between churn and customers without partners
+> - Outcome: I rejected the Null Hypothesis, in that there is a relationship with single customers and churn.
+
+> - ** Hypothesis 2 -**
+> - alpha = 0.05
+> - H0: There is NO relationship between churn and customers with dependents
+> - Ha: There IS a relationship between churn and customers with dependents
+> - Outcome: I rejected the Null Hypothesis, in that there is a relationship with customers that have dependents and the high churn rate.
+
+<hr style="border-top: 10px lavender; margin-top: 1px; margin-bottom: 1px"></hr>
 
 
  ### <b>Project Planning (aka How I think I'll get there!):</b><br>
